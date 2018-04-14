@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Document</title>
+        <title>Resume</title>
         <script src="./plugins/jquery-3.2.1.slim.min.js"></script>
         <link rel="stylesheet" href="./plugins/font-awesome/css/font-awesome.css">
         <style>
@@ -36,7 +36,7 @@
                 height:100vh;
                 margin:0px;
             }
-        
+
             .home{
                 background-color: #3C599B;
             }
@@ -49,7 +49,7 @@
                 text-align: center;
                 margin: 0;
             }
-            
+
             .grid-middle{
                 position: relative;
                 top:50%;
@@ -77,13 +77,15 @@
             .content-row4{
                 height:25%;
             }
-            
+
 
             .grid2{
                 /* border: 1px black solid; */
                 float: left;
-                width: 50%;
-                height: 100vh;  
+                width: 40%;
+                height: 100%;
+                margin-right: 5%;
+                margin-left: 5%;
             }
 
             .me{
@@ -92,11 +94,13 @@
             }
             .me-photo{
                 text-align: center;
-                line-height: 100vh;
+                line-height: 100%;
             }
             .me-photo img{
-                vertical-align: middle;
                 max-width: 100%;
+                position: relative;
+                top:50%;
+                transform:translateY(-50%);
             }
             .me-information{
                 position: relative;
@@ -108,7 +112,8 @@
                 margin-right: auto;
             }
             .me-table td{
-                width:4em;
+                width:6em;
+                height: 3em;
             }
 
             .education{
@@ -145,6 +150,22 @@
                 /* animation-name: line-blue-animation; */
                 animation-duration: 2s;
             }
+            .line-blue2{
+                height:100%;
+                width:75%;
+                background-color: #57d3aa;
+                display:block;
+                /* animation-name: line-blue-animation; */
+                animation-duration: 2s;
+            }
+            .line-blue3{
+                height:100%;
+                width:70%;
+                background-color: #57d3aa;
+                display:block;
+                /* animation-name: line-blue-animation; */
+                animation-duration: 2s;
+            }
             .line-yellow{
 
             }
@@ -158,6 +179,14 @@
             @keyframes line-blue-animation{
                 0% {width:0%;}
                 100% {width:80%}
+            }
+            @keyframes line-blue-animation2{
+                0% {width:0%;}
+                100% {width:75%}
+            }
+            @keyframes line-blue-animation3{
+                0% {width:0%;}
+                100% {width:70%}
             }
             @keyframes line-yellow-animation{
                 0% {width:0%;}
@@ -176,6 +205,8 @@
                     var sectionVal = $(".section").height();
                     if(scrollVal>2.5*sectionVal){
                         $(".line-blue").css("animation-name","line-blue-animation");
+                        $(".line-blue2").css("animation-name","line-blue-animation2");
+                        $(".line-blue3").css("animation-name","line-blue-animation3");
                     }
                 });
             });
@@ -188,19 +219,23 @@
 
         </div>
         <div class="section me">
-            <div class="grid2 me-photo">
-                <img src="./images/head.jpg" alt="head photo"></img>
-            </div>
-            <div class="grid2">
-                <div class="me-information">
-                    <table class="me-table" align="center">
-                        <tr><td><i class="fa fa-user"></i></td><td>Li Yu-Cheng</td></tr>
-                        <tr><td><i class="fa fa-envelope"></i></td><td>fantp@gmail.com</td></tr>
-                        <tr><td><i class="fa fa-phone"></i></td><td>(+886)901234567</td></tr>
-                        <tr><td><i class="fa fa-globe"></i></td><td>www.fantp6.com.tw</td></tr>
-                    </table>
+            <div class="grid-middle">
+                <div class="content">
+                    <div class="grid2 me-photo">
+                        <img src="./images/head2.jpg" alt="head photo"></img>
+                    </div>
+                    <div class="grid2">
+                        <div class="me-information">
+                            <table class="me-table" align="center">
+                                <tr><td><i class="fa fa-user fa-lg"></i></td><td>Li Yu-Cheng</td></tr>
+                                <tr><td><i class="fa fa-envelope fa-lg"></i></td><td>fantp@gmail.com</td></tr>
+                                <!-- <tr><td><i class="fa fa-phone fa-lg"></i></td><td>(+886)901234567</td></tr> -->
+                                <tr><td><i class="fa fa-globe fa-lg"></i></td><td>www.fantp6.com.tw</td></tr>
+                            </table>
+                        </div>
+                    </div>
                 </div>
-            </div>
+           </div>
         </div>
         <div class="section education">
            <div class="grid-middle">
@@ -218,7 +253,7 @@
                             <div class="content-row2 education-duration">2018.09 ~ now</div>
                         </div>
                     </div>
-                </div> 
+                </div>
            </div>
         </div>
         <div class="section skill">
@@ -240,7 +275,7 @@
                             <div class="content-row2">JAVA</div>
                             <div class="content-row2">
                                 <span class="line-default">
-                                    <span class="line-blue"></span>
+                                    <span class="line-blue2"></span>
                                 </span>
                             </div>
                         </div>
@@ -256,12 +291,12 @@
                             <div class="content-row2">PHP/JS</div>
                             <div class="content-row2">
                                 <span class="line-default">
-                                    <span class="line-blue"></span>
+                                    <span class="line-blue3"></span>
                                 </span>
                             </div>
                         </div>
                     </div>
-                </div> 
+                </div>
            </div>
         </div>
     </body>
